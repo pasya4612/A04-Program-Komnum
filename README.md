@@ -1,4 +1,26 @@
+# Laporan Tugas Program Komputasi Numerik - A04
+
+</div>
+
+### Anggota Kelompok
+
+- Raynald Ramadhani Fachriansyah (5025241020)
+
+- Ferdian Ardra Hafizhan (5025241033)
+
+- Reza Afzaal Faizullah Taqy (5025241051)
+
+- Muhammad Hilbran Akmal Abrar (5025241052)
+
+- Ary Pasya Fernanda (5025241053)
+
+## Soal
+
+<img width="550" alt="soal" src="https://github.com/user-attachments/assets/1bce36c5-203b-4819-af0b-2ff2dc8324ff" />
+
+
 ### Code
+
 ```py
 def f(x):
     return x**3 + 10*x**2 - 7*x - 196
@@ -41,8 +63,7 @@ if result is not None:
 
 ### Penjelasan
 
-
-# Metode Posisi Salah (False Position Method)
+# Metode Posisi Salah
 
 Program ini menggunakan **metode posisi salah** untuk mencari akar dari fungsi non-linear. Metode ini merupakan metode numerik berbasis **interpolasi linear**.
 
@@ -56,6 +77,7 @@ def f(x):
 ```
 
 ### Penjelasan:
+
 Fungsi `f(x)` yang ingin dicari akarnya:
 \[
 f(x) = x^3 + 10x^2 - 7x - 196
@@ -70,6 +92,7 @@ def posisi_salah(a, b, xr_true, min_error = 0, max_error = 1, max_iter=100):
 ```
 
 ### Parameter:
+
 - `a`, `b`: Tebakan awal (interval `[a, b]`)
 - `xr_true`: Akar sebenarnya (untuk menghitung error relatif)
 - `min_error`: Batas bawah error
@@ -119,7 +142,7 @@ Update interval berdasarkan tanda dari `f(xr)`.
 ## Menjalankan Program
 
 ```python
-a = -5   
+a = -5
 b = 8
 xr_true = 4
 result = posisi_salah(a, b, xr_true)
@@ -131,14 +154,6 @@ Menjalankan fungsi dengan interval awal `[-5, 8]` dan akar sebenarnya `4`.
 
 ## Output
 
-
-![image](https://github.com/user-attachments/assets/d4ea71df-acce-4d75-bb14-29fe45f64638)
-
-
+<img width="506" alt="output" src="https://github.com/user-attachments/assets/01c1bb65-376a-4841-9b1f-71483d9e3926" />
 
 ---
-
-## Catatan
-
-- Pastikan interval awal mengapit akar (tanda `f(a)` dan `f(b)` berbeda)
-- Akurasi tergantung parameter `max_error` dan `max_iter`
